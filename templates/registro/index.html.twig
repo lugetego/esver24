@@ -54,7 +54,7 @@
         {% endfor %}
         {% for registro in registros %}
             {% if registro.beca == 'Sin beca' %}
-                {% set sin = sinbeca + 1 %}
+                {% set sinbeca = sinbeca + 1 %}
             {% endif %}
         {% endfor %}
 
@@ -87,7 +87,7 @@
             Hosp. y alim. <span class="badge bg-dark">{{ hospyalim }}</span>
         </button>
         <button type="button" class="btn btn-light mb-5 ">
-            Hosp. y alim. <span class="badge bg-dark">{{ sinbeca }}</span>
+            Sin beca <span class="badge bg-dark">{{ sinbeca }}</span>
         </button>
         <button type="button" class="btn btn-light mb-5 ">
             Recomendados <span class="badge bg-dark">{{ recomendados }}</span>
