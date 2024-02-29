@@ -70,3 +70,7 @@ textarea{
 textarea#registro_razones {
     height: 200px;
 }
+
+textarea#registro_restricciones {
+    height: 100px;
+}
