@@ -15,6 +15,7 @@
         {% set recomendados = 0 %}
         {% set alimentacion = 0 %}
         {% set hospedaje = 0 %}
+        {% set sinbeca = 0 %}
         {% set hospyalim = 0 %}
         {% set transporte = 0 %}
         {% set aceptados = 0 %}
@@ -51,6 +52,11 @@
                 {% set hospyalim = hospyalim + 1 %}
             {% endif %}
         {% endfor %}
+        {% for registro in registros %}
+            {% if registro.beca == 'Sin beca' %}
+                {% set sin = sinbeca + 1 %}
+            {% endif %}
+        {% endfor %}
 
         {% for registro in registros %}
             {% if registro.aceptado == true %}
@@ -80,7 +86,9 @@
         <button type="button" class="btn btn-light mb-5 ">
             Hosp. y alim. <span class="badge bg-dark">{{ hospyalim }}</span>
         </button>
-
+        <button type="button" class="btn btn-light mb-5 ">
+            Hosp. y alim. <span class="badge bg-dark">{{ sinbeca }}</span>
+        </button>
         <button type="button" class="btn btn-light mb-5 ">
             Recomendados <span class="badge bg-dark">{{ recomendados }}</span>
         </button>
