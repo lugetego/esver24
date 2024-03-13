@@ -97,16 +97,14 @@ class RegistroType extends AbstractType
             ])
             ->add('curso1',ChoiceType::class, [
                 'choices'  => [
-                    'C1-Mapas en superficies y sus simetrías' => 'C1',
-                    'C2-Grupos, Acciones y Geometría' => 'C2',
-                    'C3-Contando simetrías' => 'C1',
+                    'C3-Contando simetrías' => 'C3',
+                    'C4-Medida y categoría en la recta real' => 'C4',
 
                 ],
                 'placeholder' => 'Seleccionar',
             ])
             ->add('curso2',ChoiceType::class, [
                 'choices'  => [
-                    'C4-Medida y categoría en la recta real' => 'C4',
                     'C5-Geometría y topología mediante el uso del álgebra'=>'C5',
                     'C6-Ultrafiltros en las matemáticas' => 'C6',
 
