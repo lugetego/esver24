@@ -23,10 +23,10 @@
                         </p>
                         <p class="card-text">
                             {% if registro.credencialName != null %}
-                            <a href="{{ vich_uploader_asset(registro, 'credencialFile') }}"  target="_blank" > <span class="badge rounded-pill bg-primary"><i class="fa-regular fa-file-pdf"></i> Credencial</span></a>
-                        {% else %}
-                            <span class="badge rounded-pill bg-warning text-dark">Sin credencial</span>
-                        {% endif %}
+                                <a href="{{ vich_uploader_asset(registro, 'credencialFile') }}"  target="_blank" > <span class="badge rounded-pill bg-primary"><i class="fa-regular fa-file-pdf"></i> Credencial</span></a>
+                            {% else %}
+                                <span class="badge rounded-pill bg-warning text-dark">Sin credencial</span>
+                            {% endif %}
                         </p>
                     </div>
                 </div>
@@ -45,11 +45,12 @@
                         </p>
                         <p class="card-text">
                             {% if registro.cartaName != null %}
-                            <a href="{{ vich_uploader_asset(registro, 'cartaFile') }}"  target="_blank" > <span class="badge rounded-pill bg-primary"><i class="fa-regular fa-file-pdf"></i> Carta de recomendación</span></a>
-                        {% else %}
-                            <span class="badge rounded-pill bg-warning text-dark">Sin carta de recomendación</span>
-                        {% endif %}
-                        </p>
+                                <a href="{{ vich_uploader_asset(registro, 'cartaFile') }}"  target="_blank" > <span class="badge rounded-pill bg-primary"><i class="fa-regular fa-file-pdf"></i> Carta de recomendación</span></a>
+                            {% elseif registro.recomendacion != null %}
+                                {{ registro.recomendacion }}
+                            {% else %}
+                                <span class="badge rounded-pill bg-warning text-dark">Sin recomendación</span>
+                            {% endif %}
                     </div>
                 </div>
             </div>
